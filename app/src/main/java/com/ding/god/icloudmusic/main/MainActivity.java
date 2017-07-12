@@ -1,7 +1,9 @@
-package com.ding.god.icloudmusic;
+package com.ding.god.icloudmusic.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ding.god.icloudmusic.R;
 
 public class MainActivity extends AppCompatActivity {
 

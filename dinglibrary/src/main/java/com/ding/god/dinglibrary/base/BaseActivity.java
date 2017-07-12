@@ -10,10 +10,9 @@ import com.ding.god.dinglibrary.utils.TUtil;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseActivity<P extends BasePresenter,M extends BaseModel> extends AppCompatActivity {
+public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
 
     public P mPresenter;
-    public M mModel;
     private Unbinder binder;
     protected Context mContext;
     protected ImageManager mImageManager;
@@ -26,9 +25,8 @@ public abstract class BaseActivity<P extends BasePresenter,M extends BaseModel> 
         mImageManager = new ImageManager(mContext);
         binder = ButterKnife.bind(this);
         mPresenter = TUtil.getT(this,0);
-        mModel = TUtil.getT(this,1);
         if (this instanceof BaseIView){
-            mPresenter.attachVM(this,mModel);
+            mPresenter.attachVM(this);
         }
     }
 

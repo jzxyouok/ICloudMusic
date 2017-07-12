@@ -1,18 +1,20 @@
 package com.ding.god.dinglibrary.base;
 
+import com.ding.god.dinglibrary.utils.TUtil;
+
 /**
  * Created by god on 2017/7/4.
  */
 
-public abstract class BasePresenter<M,V> {
+public abstract class BasePresenter<M extends BaseModel ,V> {
 
     public M mModel;
     public V mView;
 
-
-    public void attachVM(V v,M m){
-        mModel = m;
+    public void attachVM(V v){
+        mModel = TUtil.getT(this,0);
         mView = v;
+
         onStart();
     }
 

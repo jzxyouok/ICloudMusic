@@ -1,6 +1,7 @@
 package com.ding.god.dinglibrary.utils;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -17,7 +18,8 @@ public class ImageManager {
 
     private RequestOptions requestOptions = new RequestOptions()
             .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.ALL);
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .error(android.R.mipmap.sym_def_app_icon);
 
 
     public ImageManager(Context mContext) {
@@ -25,10 +27,10 @@ public class ImageManager {
     }
 
     public void loadUrlImage(String url, ImageView iv){
+        Log.d("TAG","zhixing");
         Glide.with(mContext)
                 .load(url)
                 .apply(requestOptions)
-                .thumbnail(0.5f)
                 .into(iv);
     }
 

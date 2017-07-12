@@ -1,5 +1,7 @@
 package com.ding.god.icloudmusic.ad;
 
+import android.content.Context;
+
 import com.ding.god.dinglibrary.base.BaseIView;
 
 /**
@@ -8,8 +10,16 @@ import com.ding.god.dinglibrary.base.BaseIView;
 
 public interface ADIView extends BaseIView {
 
+    //获得context
+    Context getContext();
+
+    //初始化视图
     void initView();
 
+    //显示广告页
     void displayADAfterASecond();
+
+    //跳转到主页
+    void toMain();
 
 }

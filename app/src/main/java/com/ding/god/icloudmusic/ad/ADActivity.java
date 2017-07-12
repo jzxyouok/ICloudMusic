@@ -1,14 +1,17 @@
 package com.ding.god.icloudmusic.ad;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.ViewStub;
 import android.widget.ImageView;
 
 import com.ding.god.dinglibrary.base.BaseActivity;
 import com.ding.god.icloudmusic.R;
+import com.ding.god.icloudmusic.main.MainActivity;
 
 import butterknife.BindView;
 
-public class ADActivity extends BaseActivity<ADPresenter,ADModel> implements ADIView {
+public class ADActivity extends BaseActivity<ADPresenter> implements ADIView {
 
 
     @BindView(R.id.iv_ad_bg)
@@ -25,22 +28,29 @@ public class ADActivity extends BaseActivity<ADPresenter,ADModel> implements ADI
 
 
     @Override
+    public Context getContext() {
+        return mContext;
+    }
+
+    @Override
     public void initView() {
 
-       // mImageManager.loadUrlImage(mModel.AD_URL,ivAD);
     }
 
     @Override
     public void displayADAfterASecond() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                vs.inflate();
-                ivAD = ((ImageView) findViewById(R.id.iv_ad));
-                mImageManager.loadUrlImage(mModel.AD_URL,ivAD);
-            }
-        });
+        vs.inflate();
+        ivAD = ((ImageView) findViewById(R.id.iv_ad));
+        mPresenter.setADImage(mImageManager,ivAD);
+        mPresenter.intentToMain();
+    }
 
+    @Override
+    public void toMain() {
+        Intent intent = new Intent(ADActivity.this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.anim_enter, R.anim.anim_out);
+        //finish();
     }
 
 

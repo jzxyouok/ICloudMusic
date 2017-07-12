@@ -8,6 +8,6 @@ import com.ding.god.dinglibrary.base.BaseModel;
 
 public class ADModel implements BaseModel {
 
-    public static final String AD_URL = "http://img2.100bt.com/upload/ttq/20121227/1356610052336.jpg";
+    public String AD_URL = "http://b.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=ca1fd2eb054f78f0805e92f74c012663/bd3eb13533fa828b97ecd15cfb1f4134960a5a45.jpg";
 
 }
