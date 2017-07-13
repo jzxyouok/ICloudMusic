@@ -25,7 +25,7 @@ public class ADPresenter extends BasePresenter<ADModel,ADIView> {
     }
 
     public void setADImage(ImageManager im, ImageView iv){
-        im.loadUrlImage(mModel.AD_URL,iv);
+        im.showUrlImage(mModel.AD_URL,iv);
     }
 
     @Override

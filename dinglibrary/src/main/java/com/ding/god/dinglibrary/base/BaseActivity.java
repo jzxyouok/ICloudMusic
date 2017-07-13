@@ -22,7 +22,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         super.onCreate(savedInstanceState);
         setContentView(getLayoutID());
         mContext = this;
-        mImageManager = new ImageManager(mContext);
+        mImageManager = new ImageManager();
         binder = ButterKnife.bind(this);
         mPresenter = TUtil.getT(this,0);
         if (this instanceof BaseIView){
