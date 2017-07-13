@@ -14,6 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 public class ImageManager {
 
+    //hjahahah
     private Context mContext;
 
     private RequestOptions requestOptions = new RequestOptions()
