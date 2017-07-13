@@ -76,7 +76,6 @@ public class ADPresenter extends BasePresenter<ADModel,ADIView> {
                         mView.toMain();
                     }
                 });
-
             }
 
         }

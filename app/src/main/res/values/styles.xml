@@ -11,4 +11,8 @@
     <style name="TransluteTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <style name="ColorTransluteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
 </resources>

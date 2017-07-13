@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".main.MainActivity"
+            android:theme="@style/TransluteTheme">
         </activity>
     </application>
 
