@@ -3,7 +3,11 @@ package com.ding.god.dinglibrary.base;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import com.ding.god.dinglibrary.R;
 import com.ding.god.dinglibrary.utils.ImageManager;
 import com.ding.god.dinglibrary.utils.TUtil;
 
@@ -16,7 +20,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     private Unbinder binder;
     protected Context mContext;
     protected ImageManager mImageManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +31,16 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         if (this instanceof BaseIView){
             mPresenter.attachVM(this);
         }
+
     }
+
+
+
 
     //获得布局
     protected abstract int getLayoutID();
+
+
 
 
     @Override

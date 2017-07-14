@@ -14,7 +14,6 @@ public abstract class BasePresenter<M extends BaseModel ,V> {
     public void attachVM(V v){
         mModel = TUtil.getT(this,0);
         mView = v;
-
         onStart();
     }
 

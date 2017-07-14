@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <attr name="topBarBackground" format="color|reference"/>
+        <attr name="icon" format="reference"/>
+        <attr name="mTitle" format="string|reference"/>
+        <attr name="mTitleSize" format="dimension|reference"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="rightIcon2" format="reference"/>
+        <attr name="centerLayout" format="reference"/>
+    </declare-styleable>
+</resources>

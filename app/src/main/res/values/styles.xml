@@ -15,4 +15,8 @@
 
     </style>
 
+    <style name="ADTheme" parent="TransluteTheme">
+        <item name="android:windowBackground">@mipmap/login_bg</item>
+    </style>
+
 </resources>

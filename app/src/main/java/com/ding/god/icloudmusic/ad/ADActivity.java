@@ -34,7 +34,6 @@ public class ADActivity extends BaseActivity<ADPresenter> implements ADIView {
 
     @Override
     public void initView() {
-
     }
 
     @Override
@@ -50,7 +49,7 @@ public class ADActivity extends BaseActivity<ADPresenter> implements ADIView {
         Intent intent = new Intent(ADActivity.this, MainActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.anim_enter, R.anim.anim_out);
-        //finish();
+        finish();
     }
 
 
