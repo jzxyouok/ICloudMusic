@@ -1,11 +1,15 @@
 package com.ding.god.dinglibrary.base;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.ding.god.dinglibrary.R;
 import com.ding.god.dinglibrary.utils.ImageManager;

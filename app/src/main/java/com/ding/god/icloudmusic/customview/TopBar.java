@@ -11,6 +11,7 @@ import android.text.Layout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -99,6 +100,8 @@ public class TopBar extends RelativeLayout {
         if (centerLayoutId != 0) {
             LayoutInflater.from(context).inflate(centerLayoutId, flCenterContainer);
         }
+
+
     }
 
     @Override
@@ -133,11 +136,29 @@ public class TopBar extends RelativeLayout {
         setMeasuredDimension(width,height);
     }
 
+
+
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         topBar.layout(0,statusBarHeight,r,height);
     }
 
+
+
+
+    public void setIconOnClickListener(OnClickListener listener){
+        ivIcon.setOnClickListener(listener);
+    }
+
+    public void setRightIconOnClickListener(OnClickListener listener){
+        ivRightIcon.setOnClickListener(listener);
+    }
+
+    public void setRightIcon2OnClickListener(OnClickListener listener){
+        ivRightIcon2.setOnClickListener(listener);
+    }
+
+    //获得状态栏的高度
     public int getStatusBarHeight() {
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
@@ -148,7 +169,5 @@ public class TopBar extends RelativeLayout {
         return result;
     }
 
-    public void addCenterView(View view){
-        flCenterContainer.addView(view);
-    }
+
 }

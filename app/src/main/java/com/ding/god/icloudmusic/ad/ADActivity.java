@@ -37,6 +37,11 @@ public class ADActivity extends BaseActivity<ADPresenter> implements ADIView {
     }
 
     @Override
+    public void bindListener() {
+
+    }
+
+    @Override
     public void displayADAfterASecond() {
         vs.inflate();
         ivAD = ((ImageView) findViewById(R.id.iv_ad));

@@ -17,6 +17,7 @@ public class ADPresenter extends BasePresenter<ADModel,ADIView> {
     @Override
     public void onStart() {
         mView.initView();
+        mView.bindListener();
         new Thread(new ASecondThread()).start();
     }
 
@@ -30,7 +31,6 @@ public class ADPresenter extends BasePresenter<ADModel,ADIView> {
 
     @Override
     public void onDestroy() {
-
     }
 
 

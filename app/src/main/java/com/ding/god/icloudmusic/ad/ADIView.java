@@ -13,9 +13,6 @@ public interface ADIView extends BaseIView {
     //获得context
     Context getContext();
 
-    //初始化视图
-    void initView();
-
     //显示广告页
     void displayADAfterASecond();
 

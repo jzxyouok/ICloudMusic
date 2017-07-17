@@ -5,4 +5,6 @@ package com.ding.god.dinglibrary.base;
  */
 
 public interface BaseIView {
+    void initView();
+    void bindListener();
 }

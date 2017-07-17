@@ -8,15 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="TransluteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
-    <style name="ColorTransluteTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
     </style>
 
-    <style name="ADTheme" parent="TransluteTheme">
-        <item name="android:windowBackground">@mipmap/login_bg</item>
+    <style name="ADTheme" parent="TranslucentTheme">
+       <item name="android:windowBackground">@mipmap/login_bg</item>
     </style>
 
 </resources>
