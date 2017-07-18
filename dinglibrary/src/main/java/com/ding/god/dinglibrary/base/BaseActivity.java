@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.ding.god.dinglibrary.BaseApplication;
 import com.ding.god.dinglibrary.R;
 import com.ding.god.dinglibrary.utils.ImageManager;
 import com.ding.god.dinglibrary.utils.TUtil;
@@ -28,6 +29,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutID());
+        BaseApplication.getInstance().addActivity(this);
         mContext = this;
         mImageManager = new ImageManager();
         binder = ButterKnife.bind(this);
@@ -56,5 +58,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         if (mPresenter!=null){
             mPresenter.detachVM();
         }
+        BaseApplication.getInstance().removeActivity(this);
     }
 }

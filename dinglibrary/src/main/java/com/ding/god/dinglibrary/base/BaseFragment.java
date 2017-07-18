@@ -12,18 +12,20 @@ import com.ding.god.dinglibrary.R;
 import com.ding.god.dinglibrary.utils.TUtil;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
 
 
     public P mPresenter;
     protected Context mContext;
+    private Unbinder unBinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutID(),container,false);
-        ButterKnife.bind(this,view);
+        unBinder = ButterKnife.bind(this,view);
         mContext = getContext();
         mPresenter = TUtil.getT(this,0);
         if (this instanceof BaseIView){
@@ -40,6 +42,9 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
         super.onDestroy();
         if (mPresenter!=null){
             mPresenter.detachVM();
+        }
+        if (unBinder!=null){
+            unBinder.unbind();
         }
     }
 }

@@ -5,4 +5,5 @@ package com.ding.god.dinglibrary.base;
  */
 
 public interface BaseModel {
+
 }

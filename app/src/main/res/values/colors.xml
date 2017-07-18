@@ -3,5 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="topBar">#D33A31</color>
+
+    <!--红色-->
+    <color name="red">#D33A31</color>
+
+    <!--灰色-->
+    <color name="grey">#898989</color>
+    <color name="black_text">#303131</color>
 </resources>

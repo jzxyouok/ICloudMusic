@@ -34,8 +34,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainIVi
     TopBar topBarMain;
     @BindView(R.id.vp_main)
     ViewPager vpMain;
-//    @BindView(R.id.nv_main)
-//    NavigationView nvMain;
+
 
     //TabLayout的tab
     private int[] tabItems = new int[]{R.drawable.main_music_selector,
@@ -74,7 +73,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainIVi
         topBarMain.setIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  drawer.openDrawer(nvMain);
+
             }
         });
     }

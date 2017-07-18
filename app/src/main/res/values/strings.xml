@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Recommend页面的String-->
+    <string name="recommend_fm">私人FM</string>
+    <string name="recommend_daily">每日歌曲推荐</string>
+    <string name="recommend_rank">云音乐热歌榜</string>
 </resources>

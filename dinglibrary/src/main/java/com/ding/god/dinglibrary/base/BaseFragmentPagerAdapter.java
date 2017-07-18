@@ -12,11 +12,19 @@ import java.util.List;
 
 public class BaseFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    protected List<BaseFragment> fragments;
+    private List<BaseFragment> fragments;
+
+    private String[] tabTitle;
 
     public BaseFragmentPagerAdapter(FragmentManager fm,List<BaseFragment> fragments) {
         super(fm);
         this.fragments = fragments;
+    }
+
+    public BaseFragmentPagerAdapter(FragmentManager fm,List<BaseFragment> fragments,String[] tabTitle) {
+        super(fm);
+        this.fragments = fragments;
+        this.tabTitle = tabTitle;
     }
 
     @Override
@@ -35,7 +43,14 @@ public class BaseFragmentPagerAdapter extends FragmentPagerAdapter {
         }else {
             return 0;
         }
-
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (tabTitle==null){
+            return super.getPageTitle(position);
+        }else {
+            return tabTitle[position];
+        }
+    }
 }

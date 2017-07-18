@@ -18,7 +18,7 @@
             android:layout_height="100dp"
             app:icon="@mipmap/menu"
             app:rightIcon="@mipmap/search"
-            app:topBarBackground="@color/topBar"
+            app:topBarBackground="@color/red"
             android:fitsSystemWindows="true"
             >
 
