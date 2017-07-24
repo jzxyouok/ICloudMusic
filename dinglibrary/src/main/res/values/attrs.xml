@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FocusView">
+        <attr name="fvBackground" format="color|reference"/>
+        <!--指示器的方位-->
+        <!--<attr name="indicatorGravity" format="enum">-->
+            <!--<enum name="parentBottomLeft">0</enum>-->
+            <!--<enum name="parentBottomRight">1</enum>-->
+            <!--<enum name="parentBottomCenter">2</enum>-->
+        <!--</attr>-->
+        <!--指示器距离边界-->
+        <attr name="indicatorPaddingStart" format="dimension"/>
+        <attr name="indicatorPaddingEnd" format="dimension"/>
+        <attr name="indicatorPaddingBottom" format="dimension"/>
+        <attr name="indicatorPadding" format="dimension"/>
+        <!--指示器的视图-->
+        <attr name="indicatorNormal" format="color|reference"/>
+        <attr name="indicatorSelected" format="color|reference"/>
+    </declare-styleable>
+</resources>

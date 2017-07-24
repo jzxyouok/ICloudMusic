@@ -1,7 +1,5 @@
 package com.ding.god.icloudmusic.network;
 
-import java.util.List;
-
 /**
  * Created by Administrator on 2017/7/12.
  */
@@ -26,5 +24,13 @@ public class BaseResponse<T> {
 
     public void setError_code(int error_code) {
         this.error_code = error_code;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseResponse{" +
+                "result=" + result +
+                ", error_code=" + error_code +
+                '}';
     }
 }

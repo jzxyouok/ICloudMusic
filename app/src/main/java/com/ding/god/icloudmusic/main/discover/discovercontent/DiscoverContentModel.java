@@ -17,7 +17,7 @@ public class DiscoverContentModel implements BaseModel{
 
     public Observable<BaseResponse<DiscoverRecommendBean>> getRecommendData(){
         return RetrofitClient.getRetrofitClient().getApiService()
-                .getRecommendBean(Constant.CHANNEL, "0", Constant.METHOD, Constant.CUID, Constant.FOCUS_NUM)
+                .getRecommendBean(Constant.FROM,Constant.VERSION,"android",Constant.CHANNEL,Constant.METHOD,Constant.CUID,Constant.FOCUS_NUM)
                 .compose(RxTransfromer.<BaseResponse<DiscoverRecommendBean>>observeOnToMain());
     }
 }

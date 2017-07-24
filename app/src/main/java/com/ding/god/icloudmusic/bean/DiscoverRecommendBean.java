@@ -2183,10 +2183,20 @@ public class DiscoverRecommendBean {
     }
 
     public static class FocusBean {
+        @Override
+        public String toString() {
+            return "FocusBean{" +
+                    "error_code=" + error_code +
+                    ", result=" + result +
+                    '}';
+        }
+
         /**
          * error_code : 22000
          * result : [{"randpic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15000171794b00085e252b36c62feb448a1a571439.jpg","code":"http://music.baidu.com/h5pc/spec_detail?id=516&columnid=86","mo_type":4,"type":6,"is_publish":"111111","randpic_iphone6":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15000171794b00085e252b36c62feb448a1a571439.jpg","randpic_desc":"爱豆秀33"},{"randpic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15001986311d4632ffb29aaca84e71997952833699.jpg","code":"http://music.baidu.com/h5pc/spec_detail?id=518&columnid=128","mo_type":4,"type":6,"is_publish":"111111","randpic_iphone6":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15001986311d4632ffb29aaca84e71997952833699.jpg","randpic_desc":""},{"randpic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_14987413870d571244968dcc057b2bd838b8832475.jpg","code":"http://music.baidu.com/cms/webview/song_vote/dfrc/index.html","mo_type":4,"type":6,"is_publish":"111111","randpic_iphone6":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_14987413870d571244968dcc057b2bd838b8832475.jpg","randpic_desc":""},{"randpic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15000197644b432836b5b02698dcc3be6e47b1a5db.jpg","code":"http://music.baidu.com/h5pc/spec_detail?id=514&columnid=126","mo_type":4,"type":6,"is_publish":"111111","randpic_iphone6":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15000197644b432836b5b02698dcc3be6e47b1a5db.jpg","randpic_desc":"天后Adele背后的神级厂牌\u2014\u2014XL Recordings"},{"randpic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_150027453928928ed2867b2860fc8d9ab4a3d311f2.jpg","code":"http://music.baidu.com/cms/webview/ticket2017/index.html","mo_type":4,"type":6,"is_publish":"111111","randpic_iphone6":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_150027453928928ed2867b2860fc8d9ab4a3d311f2.jpg","randpic_desc":"薛之谦演唱会会员专属福利"}]
          */
+
+
 
         private int error_code;
         private List<ResultBeanXXXXXXXXXXXXXXX> result;

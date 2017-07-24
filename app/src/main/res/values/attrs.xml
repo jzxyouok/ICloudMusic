@@ -9,4 +9,5 @@
         <attr name="rightIcon2" format="reference"/>
         <attr name="centerLayout" format="reference"/>
     </declare-styleable>
+
 </resources>

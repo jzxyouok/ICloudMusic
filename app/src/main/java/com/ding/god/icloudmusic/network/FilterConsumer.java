@@ -13,6 +13,6 @@ public abstract class FilterConsumer<T extends BaseResponse> implements Consumer
 
     @Override
     public void accept(@NonNull T t) throws Exception {
-
+        response(t);
     }
 }

@@ -1,9 +1,9 @@
 package com.ding.god.icloudmusic.main.discover.discovercontent;
 
+import android.util.Log;
+
 import com.ding.god.dinglibrary.base.BasePresenter;
 import com.ding.god.icloudmusic.bean.DiscoverRecommendBean;
-import com.ding.god.icloudmusic.main.discover.DiscoverIView;
-import com.ding.god.icloudmusic.main.discover.DiscoverModel;
 import com.ding.god.icloudmusic.network.BaseResponse;
 import com.ding.god.icloudmusic.network.FilterConsumer;
 
@@ -27,10 +27,12 @@ public class DiscoverContentPresenter extends BasePresenter<DiscoverContentModel
     }
 
     public void getRecommendData(){
+
         mModel.getRecommendData()
                 .subscribe(new FilterConsumer<BaseResponse<DiscoverRecommendBean>>() {
                     @Override
                     public void response(BaseResponse<DiscoverRecommendBean> response) {
+                        Log.d("TAG","RESPONSE:"+response.toString());
                         mView.addRecommendData(response.getResult());
                     }
                 }, new Consumer<Throwable>() {

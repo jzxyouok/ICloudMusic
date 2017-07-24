@@ -16,7 +16,7 @@ public class RetrofitClient  {
     public static final String URL = "http://tingapi.ting.baidu.com/v1/restserver/";
 
 
-
+    //可以在Log打印出下载的json数据
     private HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(
             new HttpLoggingInterceptor.Logger() {
                 @Override
@@ -28,6 +28,7 @@ public class RetrofitClient  {
 
     private OkHttpClient okHttpClient = new  OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            .addInterceptor(new NetWorkInterceptor())
             .build();
 
     private Retrofit retrofit = new Retrofit.Builder()

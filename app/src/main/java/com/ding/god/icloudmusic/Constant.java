@@ -5,7 +5,7 @@ package com.ding.god.icloudmusic;
  */
 
 public class Constant {
-
+    public static final String FROM = "android";
     public static final String VERSION = "5.9.9.6";
     public static final String CHANNEL = "xiaomi";
     public static final String CUID = "A5DE9C8A9D88E9E264C3E02D71AD499F";
