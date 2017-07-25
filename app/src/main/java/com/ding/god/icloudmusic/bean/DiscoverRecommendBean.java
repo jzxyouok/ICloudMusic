@@ -30,21 +30,21 @@ public class DiscoverRecommendBean {
      * king : {"error_code":22000,"result":[{"pic_big":"http://musicdata.baidu.com/data2/pic/eb3bb619bdf02ab57cc86a47187af013/541463581/541463581.jpg@s_0,w_150","title":"敢爱就来","author":"冯建宇"},{"pic_big":"http://musicdata.baidu.com/data2/pic/0f1f232f9e6f921a595c1e4a076473c2/542052591/542052591.jpg@s_0,w_150","title":"上海LOCKING","author":"十二星宿风之少年"},{"pic_big":"http://musicdata.baidu.com/data2/pic/9d4faa13282c9d6beea41f479448f259/540090993/540090993.jpg@s_0,w_150","title":"拿不走的记忆","author":"迪玛希"}]}
      */
 
-    private Mix1Bean mix_1;
-    private Mod29Bean mod_29;
+    private Mix1Bean mix_1;//新歌首发
+    private Mod29Bean mod_29;//一个广告
     private EntryBean entry;
     private SceneBean scene;
-    private Mix5Bean mix_5;
+    private Mix5Bean mix_5;//最热MV推荐
     private RecsongBean recsong;
     private ShowListBean show_list;
-    private Mix22Bean mix_22;
+    private Mix22Bean mix_22;//热销专辑
     private RadioBean radio;
-    private Mod7Bean mod_7;
-    private Mix61Bean mix_61;
-    private Mix9Bean mix_9;
+    private Mod7Bean mod_7;//专栏
+    private Mix61Bean mix_61;//理想音乐
+    private Mix9Bean mix_9;//音乐活动
     private Mix2Bean mix_2;
     private NewSongBean new_song;
-    private Mix29Bean mix_29;
+    private Mix29Bean mix_29;//编辑精选
     private FocusBean focus;
     private DiyBean diy;
     private KingBean king;

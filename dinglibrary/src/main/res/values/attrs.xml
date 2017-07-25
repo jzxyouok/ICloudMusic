@@ -3,11 +3,11 @@
     <declare-styleable name="FocusView">
         <attr name="fvBackground" format="color|reference"/>
         <!--指示器的方位-->
-        <!--<attr name="indicatorGravity" format="enum">-->
-            <!--<enum name="parentBottomLeft">0</enum>-->
-            <!--<enum name="parentBottomRight">1</enum>-->
-            <!--<enum name="parentBottomCenter">2</enum>-->
-        <!--</attr>-->
+        <attr name="indicatorGravity">
+            <enum name="parentBottomLeft" value="0"/>
+            <enum name="parentBottomRight" value="1"/>
+            <enum name="parentBottomCenter" value="2"/>
+        </attr>
         <!--指示器距离边界-->
         <attr name="indicatorPaddingStart" format="dimension"/>
         <attr name="indicatorPaddingEnd" format="dimension"/>

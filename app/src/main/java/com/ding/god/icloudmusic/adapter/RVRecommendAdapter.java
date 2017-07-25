@@ -25,7 +25,6 @@ import butterknife.ButterKnife;
 
 public class RVRecommendAdapter extends BaseRVAdapter<DiscoverRecommendBean, RecyclerView.ViewHolder> {
 
-    private static final int TYPE_FOCUS = 0;
     private static final int TYPE_NAVI = 1;
     private static final int TYPE_NORMAL = 2;
     private static final int TYPE_LASTED = 3;
@@ -34,67 +33,36 @@ public class RVRecommendAdapter extends BaseRVAdapter<DiscoverRecommendBean, Rec
         super(context);
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        return super.getItemViewType(position);
-    }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        //根据type的不同获得不同的视图，取得不同的viewholder
+    public int getItemType(int position) {
+        if (position==0){
+            return TYPE_NAVI;
+        }else {
+            return TYPE_NORMAL;
+        }
+    }
+
+
+    @Override
+    public RecyclerView.ViewHolder onCreateBodyViewHolder(ViewGroup parent, int viewType) {
         View view = null;
         switch (viewType) {
-            case TYPE_FOCUS:
-                view = mInflater.inflate(R.layout.item_discover_recommend_focus, parent, false);
-                return new FocusViewHolder(view);
             case TYPE_NAVI:
                 view = mInflater.inflate(R.layout.item_discover_recommend_navi, parent, false);
                 return new NaviViewHolder(view);
             case TYPE_NORMAL:
                 view = mInflater.inflate(R.layout.item_discover_recommend_normal, parent, false);
                 return new NormalViewHolder(view);
-            case TYPE_LASTED:
-                break;
         }
         return null;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        DiscoverRecommendBean data = getData(0);
-        switch (getItemViewType(position)){
-            case TYPE_FOCUS:
-                DiscoverRecommendBean.FocusBean focus = data.getFocus();
-                FocusViewHolder focusViewHolder = (FocusViewHolder) holder;
-                List<ImageView> imageViews = new ArrayList<>();
-                for (int i=0;i<data.getFocus().getResult().size();i++){
-                    ImageView imageView = new ImageView(mContext);
-                    imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-                    mImageManager.showUrlImage(focus.getResult().get(i).getRandpic(), imageView);
-                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                    imageViews.add(imageView);
-                }
-                focusViewHolder.vpRecommendFocus.setAdapter(new VPFocusAdapter(imageViews));
-                break;
-            case TYPE_NAVI:
-                break;
-            case TYPE_NORMAL:
-                break;
-            case TYPE_LASTED:
-                break;
-        }
+    public void onBindBodyViewHolder(RecyclerView.ViewHolder holder, int position) {
+
     }
 
-
-    static class FocusViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.vp_recommend_focus)
-        ViewPager vpRecommendFocus;
-
-        FocusViewHolder(View view) {
-            super(view);
-            ButterKnife.bind(this, view);
-        }
-    }
 
 
     static class NaviViewHolder extends RecyclerView.ViewHolder {

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ding.god.dinglibrary.R;
+import com.ding.god.dinglibrary.utils.ImageManager;
 import com.ding.god.dinglibrary.utils.TUtil;
 
 import butterknife.ButterKnife;
@@ -19,6 +20,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
 
     public P mPresenter;
     protected Context mContext;
+    protected ImageManager mImageManager;
     private Unbinder unBinder;
 
     @Override
@@ -27,6 +29,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment {
         View view = inflater.inflate(getLayoutID(),container,false);
         unBinder = ButterKnife.bind(this,view);
         mContext = getContext();
+        mImageManager = new ImageManager();
         mPresenter = TUtil.getT(this,0);
         if (this instanceof BaseIView){
             mPresenter.attachVM(this);
