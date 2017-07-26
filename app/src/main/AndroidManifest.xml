@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/TranslucentTheme">
         <activity
-            android:name=".ad.ADActivity"
+            android:name=".module.ad.ADActivity"
             android:theme="@style/ADTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name=".module.main.MainActivity"
             android:theme="@style/TranslucentTheme"/>
     </application>
 

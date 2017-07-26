@@ -25,7 +25,7 @@ public interface ApiService {
 //     * @return 首页的个性推荐的数据
 //     */
     @GET("ting")
-    Observable<BaseResponse<DiscoverRecommendBean>> getRecommendBean(@Query("from") String from,
+    Observable<DiscoverRecommendBean> getRecommendBean(@Query("from") String from,
                                                                      @Query("version")String version,
                                                                      @Query("format") String format,
                                                                      @Query("channel") String channel,

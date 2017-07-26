@@ -13,4 +13,11 @@ public class Constant {
     public static final String METHOD = "baidu.ting.plaza.index";
     public static final String FOCUS_NUM = "8";
 
+    //-------------------------------------------------------------
+    //SP的Tag！！！！！
+    public static class SPTag{
+        public static final String RECOMMEND_MODULE = "recommend_module";//个性推荐的模块顺序
+    }
+
+
 }

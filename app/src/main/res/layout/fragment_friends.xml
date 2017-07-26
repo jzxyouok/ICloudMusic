@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ding.god.icloudmusic.main.friends.FriendsFragment">
+    tools:context=".module.main.friends.FriendsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

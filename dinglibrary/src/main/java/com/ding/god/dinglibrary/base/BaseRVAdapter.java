@@ -37,13 +37,18 @@ public abstract class BaseRVAdapter<T,VH extends RecyclerView.ViewHolder> extend
     }
 
     @Override
-    public int getItemCount() {
-        int count = datas.size();
+    public final int getItemCount() {
+        int count =0;
         if (headView!=null){
             count+=1;
         }
-        return count;
+        return count+getCount();
     }
+
+    public int getCount(){
+        return 0;
+    }
+
 
     public int getRealPosition(RecyclerView.ViewHolder holder){
         int position = holder.getLayoutPosition();

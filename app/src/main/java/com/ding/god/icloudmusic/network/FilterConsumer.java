@@ -13,6 +13,12 @@ public abstract class FilterConsumer<T extends BaseResponse> implements Consumer
 
     @Override
     public void accept(@NonNull T t) throws Exception {
-        response(t);
+        if (t.getError_code()==22000){
+            response(t);
+        }else {
+            if (t.getError_message()!=null){
+                throw new Exception(t.getError_message());
+            }
+        }
     }
 }
